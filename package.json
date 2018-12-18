@@ -18,5 +18,14 @@
   "dependencies": {
     "inquirer": "^6.2.1",
     "ora": "^3.0.0"
-  }
+  },
+  "engines": {
+    "node": ">8.0.0"
+  },
+  "keywords": [
+    "task",
+    "helper",
+    "assistant",
+    "typescript"
+  ]
 }
