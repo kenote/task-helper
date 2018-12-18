@@ -62,4 +62,4 @@ $ node ./task.js
 
 ## License
 
-this repo is released under the [MIT License](https://github.com/kenote/mongoose-helper/blob/master/LICENSE).
+this repo is released under the [MIT License](https://github.com/kenote/task-helper/blob/master/LICENSE).
