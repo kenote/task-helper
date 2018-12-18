@@ -47,7 +47,7 @@ var __values = (this && this.__values) || function (o) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var inquirer = require("inquirer");
 var ora = require("ora");
-var pick_1 = require("lodash/pick");
+var pick = require("lodash/pick");
 var TaskHelper = (function () {
     function TaskHelper() {
     }
@@ -58,7 +58,7 @@ var TaskHelper = (function () {
             return __generator(this, function (_e) {
                 switch (_e.label) {
                     case 0:
-                        __Choices = this.__Tasks.map(function (o) { return pick_1.default(o, ['name', 'value']); });
+                        __Choices = this.__Tasks.map(function (o) { return pick(o, ['name', 'value']); });
                         questions = [
                             {
                                 type: 'rawlist',
