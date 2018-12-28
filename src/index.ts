@@ -42,7 +42,7 @@ export class TaskHelper {
         console.log(result)
       }
     }
-    handers[options.type_name] && await TaskSpinner(handers[options.type_name]())
+    handers[options.type_name] && await handers[options.type_name]()
     process.exit(0)
   }
 }

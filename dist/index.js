@@ -103,7 +103,7 @@ var TaskHelper = (function () {
                         }
                         _d = handers[options.type_name];
                         if (!_d) return [3, 3];
-                        return [4, TaskSpinner(handers[options.type_name]())];
+                        return [4, handers[options.type_name]()];
                     case 2:
                         _d = (_e.sent());
                         _e.label = 3;

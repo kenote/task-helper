@@ -41,10 +41,14 @@ new Task().start()
 `task/initialize.ts`
 
 ```ts
+import { TaskSpinner } from 'kenote-task-helper'
+
 export default async function initialize (): Promise<any> {
-  return await Promise.all([
+  await Promise.all([
     ...
   ])
+  ...
+  return TaskSpinner(Promise.resolve(`Initialize Finished.`))
 }
 ```
 
