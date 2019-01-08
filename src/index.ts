@@ -1,7 +1,7 @@
 
 import * as inquirer from 'inquirer'
 import * as ora from 'ora'
-import * as pick from 'lodash/pick'
+import { pick } from 'lodash'
 
 interface TaskItem {
   name: string;
