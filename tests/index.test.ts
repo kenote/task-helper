@@ -5,16 +5,9 @@ const cliPath: string = __dirname + '/app.ts'
 describe('\nTasks testing ->\n', () => {
 
   test('Default Press Enter', async () => {
-    // try {
-      let result: any = await run([cliPath], [ENTER])
-      // console.log(result)
-      expect(/(initialize)/.test(result)).toBe(true)
-    // } catch (error) {
-      // console.log('error', error)
-      // done()
-    // }
-    
-  }, 5000)
+    let result: any = await run([cliPath], [ENTER])
+    expect(/(initialize)/.test(result)).toBe(true)
+  })
 
   /*test('Press Down > Enter', async () => {
     let result: any = await run([cliPath], [DOWN, ENTER])
