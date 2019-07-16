@@ -5,14 +5,14 @@ const cliPath: string = __dirname + '/app.ts'
 describe('\nTasks testing ->\n', () => {
 
   test('Default Press Enter', async () => {
-    try {
+    // try {
       let result: any = await run([cliPath], [ENTER])
       console.log(result)
       expect(/(\? 操作类型: initialize)/.test(result)).toBe(true)
-    } catch (error) {
+    // } catch (error) {
       // console.log('error', error)
       // done()
-    }
+    // }
     
   }, 5000)
 
