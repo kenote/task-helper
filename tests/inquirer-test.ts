@@ -27,8 +27,13 @@ export default function (args: string[], combo: string[], timeout: number = 200)
 
   return new Promise( (resolve, reject) => {
     proc.stdout.pipe( concat( result => {
+      if (result) {
+        resolve(result.toString())
+      }
+      else {
+        reject('null')
+      }
       
-      resolve(result.toString())
     }))
 
   })
