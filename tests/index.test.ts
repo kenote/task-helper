@@ -7,8 +7,8 @@ describe('\nTasks testing ->\n', () => {
   test('Default Press Enter', async () => {
     // try {
       let result: any = await run([cliPath], [ENTER])
-      console.log(result)
-      expect(/(\? 操作类型: initialize)/.test(result)).toBe(true)
+      // console.log(result)
+      expect(/(initialize)/.test(result)).toBe(true)
     // } catch (error) {
       // console.log('error', error)
       // done()
