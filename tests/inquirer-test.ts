@@ -25,8 +25,9 @@ export default function (args: string[], combo: string[], timeout: number = 200)
 
   loop(combo)
 
-  return new Promise( resolve => {
+  return new Promise( (resolve, reject) => {
     proc.stdout.pipe( concat( result => {
+      
       resolve(result.toString())
     }))
 
