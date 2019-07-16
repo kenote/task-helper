@@ -8,7 +8,7 @@
   "author": "thondery <thondery@163.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "build": "rm -rf ./dist && tsc",
     "postinstall": "npm run build"
   },

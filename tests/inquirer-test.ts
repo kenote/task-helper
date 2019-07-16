@@ -3,7 +3,7 @@ import { spawn, ChildProcessWithoutNullStreams } from 'child_process'
 
 const concat = require('concat-stream')
 
-export default function (args: string[], combo: string[], timeout: number = 200): Promise<any> {
+export default function (args: string[], combo: string[], timeout: number = 200) {
   let command: string = 'node'
   if (args.length > 0) {
     let extname: string = path.extname(args[0])
@@ -25,7 +25,13 @@ export default function (args: string[], combo: string[], timeout: number = 200)
 
   loop(combo)
 
-  return new Promise( (resolve, reject) => {
+  return new Promise((resolve, reject) => {
+    proc.stdout.on('error', reject)
+    proc.stdout.pipe( concat(resolve) )
+  })
+  
+
+  /*return new Promise( (resolve, reject) => {
     proc.stdout.pipe( concat( result => {
       if (result) {
         resolve(result.toString())
@@ -36,7 +42,7 @@ export default function (args: string[], combo: string[], timeout: number = 200)
       
     }))
 
-  })
+  })*/
 }
 
 export const DOWN: string = '\x1B\x5B\x42'
