@@ -8,20 +8,17 @@
   "author": "thondery <thondery@163.com>",
   "license": "MIT",
   "scripts": {
-    "test": "ava-ts --serial --verbose tests/index.ava.ts",
+    "test": "ava --serial --verbose tests/index.ava.ts",
     "build": "rm -rf ./dist && tsc",
     "postinstall": "npm run build"
   },
   "devDependencies": {
     "@types/inquirer": "^6.0.3",
-    "@types/jest": "^24.0.15",
     "@types/lodash": "^4.14.136",
     "@types/ora": "^3.2.0",
     "ava": "^2.2.0",
     "ava-ts": "^0.25.2",
     "concat-stream": "^2.0.0",
-    "jest": "^24.8.0",
-    "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
@@ -29,6 +26,15 @@
   "dependencies": {
     "inquirer": "^6.5.0",
     "ora": "^3.4.0"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   },
   "engines": {
     "node": ">8.0.0"

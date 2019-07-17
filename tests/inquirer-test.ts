@@ -29,20 +29,6 @@ export default function (args: string[], combo: string[], timeout: number = 200)
     proc.stdout.on('error', reject)
     proc.stdout.pipe( concat(resolve) )
   })
-  
-
-  /*return new Promise( (resolve, reject) => {
-    proc.stdout.pipe( concat( result => {
-      if (result) {
-        resolve(result.toString())
-      }
-      else {
-        reject('null')
-      }
-      
-    }))
-
-  })*/
 }
 
 export const DOWN: string = '\x1B\x5B\x42'
