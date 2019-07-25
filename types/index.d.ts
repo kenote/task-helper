@@ -1,4 +1,39 @@
-export { TaskHelper, TaskSpinner, Connect } from '../src'
+import ora from 'ora'
+
+/**
+ * 连接任务配置
+ * @param setting TaskSetting
+ */
+export declare function Connect (setting: TaskSetting): any
+
+/**
+ * TaskSpinner
+ * @param task Promise<any>
+ * @param options string | ora.Options
+ */
+export declare function TaskSpinner (task: Promise<any>): Promise<any>
+export declare function TaskSpinner (task: Promise<any>, options: string | ora.Options): Promise<any>
+
+/**
+ * 任务助手类
+ */
+export declare class TaskHelper {
+
+  /**
+   * 标题
+   */
+  private __Title: string
+
+  /**
+   * 任务列表
+   */
+  private __Tasks: TaskItem[]
+
+  /**
+   * 启动任务
+   */
+  public start (): Promise<void>
+}
 
 /**
  * 任务单元

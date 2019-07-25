@@ -1,5 +1,5 @@
 import * as inquirer from 'inquirer'
-import * as ora from 'ora'
+import ora from 'ora'
 import { pick } from 'lodash'
 import { TaskSetting, TaskItem, Maps } from '../types'
 
