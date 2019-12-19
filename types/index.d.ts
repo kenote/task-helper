@@ -1,4 +1,4 @@
-import ora from 'ora'
+import * as ora from 'ora'
 
 /**
  * 连接任务配置
