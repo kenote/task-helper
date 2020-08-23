@@ -22,8 +22,8 @@ export class TaskHelper {
    * 启动任务
    */
   public async start (): Promise<void> {
-    let choices: inquirer.ChoiceType<any>[] = this.__Tasks.map( item => pick(item, ['name', 'value']) )
-    let questions: inquirer.Questions<{}> = [
+    let choices = this.__Tasks.map( item => pick(item, ['name', 'value']) )
+    let questions: inquirer.QuestionCollection<{}> = [
       {
         type: 'rawlist',
         name: 'type_name',
